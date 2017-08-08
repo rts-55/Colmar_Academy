@@ -42,6 +42,7 @@ nav a {
 .media_box {
   width: 60%;
   margin: 32px 24px;
+  border: 1px solid yellow;
 }
 
 .media_box img {
@@ -60,10 +61,73 @@ nav a {
   justify-content: center;
 }
 
+#headline_text h3 {
+  padding-bottom: 24px;
+}
+
 #start_button {
   color: white;
   background-color: black;
   padding-top: 8px;
   padding-bottom: 8px;
   text-align: center;
+}
+
+#info_banner {
+  display: flex;
+  border: 1px dashed green;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  height: 100%;
+  border: 1px solid blue;
+}
+
+.sidebar_info {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar img {
+  height: auto;
+  width: 35%;
+  height: 35%;
+  margin: 16px;
+}
+
+#practice_image p {
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+#practice_image span {
+  margin-bottom: 32px;
+}
+
+#thesis_exhibit h1 {
+  display: block;
+  text-align: center;
+}
+
+#thesis_media {
+  display: flex;
+}
+
+#thesis_video p {
+  padding-bottom: 32px;
+}
+
+
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+}
+
+footer p {
+  margin-left: 24px;
 }
