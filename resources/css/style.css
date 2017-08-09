@@ -1,7 +1,14 @@
 header {
+  height: 64px;
+}
+
+#header_full {
   display: flex;
   justify-content: space-between;
-  height: 64px;
+}
+
+#header_mobile {
+  display: none;
 }
 
 #logo {
@@ -49,6 +56,16 @@ nav a {
   width: 100%;
 }
 
+@media only screen and (max-width: 480px) {
+  #header_full {
+    display: none;
+  }
+  #header_mobile {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 #headline_banner {
   display: flex;
   background-color: gray;
@@ -71,6 +88,12 @@ nav a {
   padding-top: 8px;
   padding-bottom: 8px;
   text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  #headline_banner {
+    display: block;
+  }
 }
 
 #info_banner {
@@ -107,6 +130,63 @@ nav a {
   margin-bottom: 32px;
 }
 
+@media only screen and (max-width: 480px) {
+  #practice_image {
+    display: none;
+  }
+  .sidebar {
+    margin: 16px 16px;
+    width: 100%;
+    height: auto;
+  }
+  .sidebar img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#learning_content {
+  background-color: gray;
+}
+
+#learning_content h1 {
+  display: block;
+  text-align: center;
+  padding: 32px 0px;
+  background-color: transparent;
+}
+
+#course_box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0px 72px 32px 72px;
+}
+
+.course_concentration {
+  width: 30%;
+  background-color: white;
+  margin-bottom: 24px;
+  border: 1px solid yellow;
+}
+
+.course_concentration img {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 480px) {
+  #course_box {
+    margin: 32px 16px;
+  }
+  .course_concentration {
+    width: 100%;
+  }
+  .course_concentration img, span, p {
+    display: none;
+  }
+}
+
 #thesis_exhibit h1 {
   display: block;
   text-align: center;
@@ -120,7 +200,14 @@ nav a {
   padding-bottom: 32px;
 }
 
-
+@media only screen and (max-width: 480px) {
+  #thesis_exhibit .sidebar {
+    display: none;
+  }
+  #media_box h3, p {
+    display: none;
+  }
+}
 
 footer {
   display: flex;
@@ -130,4 +217,10 @@ footer {
 
 footer p {
   margin-left: 24px;
+}
+
+@media only screen and (max-width: 480px) {
+  nav {
+    display: none;
+  }
 }
