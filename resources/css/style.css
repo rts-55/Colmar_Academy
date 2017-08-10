@@ -1,5 +1,8 @@
-header {
-  height: 64px;
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: #404040;
+  background-color: 	hsl(0, 0%, 98%);
 }
 
 #header_full {
@@ -14,6 +17,7 @@ header {
 #logo {
   display: flex;
   align-items: center;
+  height: 64px;
 }
 
 #logo img {
@@ -23,11 +27,12 @@ header {
 
 #logo p {
   display: inline-block;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 #logo span {
   color: gray;
+  font-weight: 300;
 }
 
 nav {
@@ -42,6 +47,7 @@ nav a {
 
 .nav_accent {
   background-color: aquamarine;
+  opacity: 0.5;
   width: 16px;
   height: 100%;
 }
@@ -49,7 +55,6 @@ nav a {
 .media_box {
   width: 60%;
   margin: 32px 24px;
-  border: 1px solid yellow;
 }
 
 .media_box img {
@@ -68,26 +73,34 @@ nav a {
 
 #headline_banner {
   display: flex;
-  background-color: gray;
+  background-color: #e6e6e6;
 }
 
 #headline_text {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+#headline_text h1 {
+  font-size: 40px;
+  margin-bottom: 0px;
+  letter-spacing: 1px;
+}
+
 #headline_text h3 {
-  padding-bottom: 24px;
+  padding: 24px 0px;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 #start_button {
   color: white;
-  background-color: black;
+  background-color: #404040;
   padding-top: 8px;
   padding-bottom: 8px;
   text-align: center;
+  letter-spacing: 1px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -98,20 +111,22 @@ nav a {
 
 #info_banner {
   display: flex;
-  border: 1px dashed green;
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
   width: 35%;
-  height: 100%;
-  border: 1px solid blue;
+  margin-top: 16px;
 }
 
 .sidebar_info {
   display: flex;
   align-items: center;
+}
+
+.sidebar_info:hover {
+  background-color: #e6e6e6;
 }
 
 .sidebar img {
@@ -121,13 +136,37 @@ nav a {
   margin: 16px;
 }
 
+.sidebar h3 {
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 0px;
+}
+
+.sidebar p {
+  font-weight: 200;
+  line-height: 1.5;
+  margin: 8px 0px;
+}
+
+.sidebar a {
+  font-weight: 300;
+  color: #6666ff;
+}
+
+#practice_image h1 {
+  letter-spacing: 1px;
+  margin: 32px 0px;
+}
+
 #practice_image p {
-  margin-top: 24px;
   margin-bottom: 32px;
+  font-weight: 200;
+  letter-spacing: 1px;
 }
 
 #practice_image span {
   margin-bottom: 32px;
+  font-weight: 400;
 }
 
 @media only screen and (max-width: 480px) {
@@ -146,33 +185,57 @@ nav a {
 }
 
 #learning_content {
-  background-color: gray;
+  background-color: #e6e6e6;
 }
 
 #learning_content h1 {
   display: block;
   text-align: center;
-  padding: 32px 0px;
+  padding-top: 32px;
   background-color: transparent;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 #course_box {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
-  margin: 0px 72px 32px 72px;
+  margin: 32px 72px;
 }
 
 .course_concentration {
   width: 30%;
   background-color: white;
-  margin-bottom: 24px;
-  border: 1px solid yellow;
+  margin-bottom: 32px;
 }
 
 .course_concentration img {
   width: 100%;
   height: auto;
+}
+
+.course_concentration h3 {
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  padding: 16px;
+  margin: 0px;
+}
+
+.course_concentration span {
+  font-weight: 200;
+  margin: 0px;
+  padding: 8px 16px;
+  color: gray;
+  line-height: 1.5;
+}
+
+.course_concentration p {
+  font-weight: 200;
+  margin: 0px;
+  padding: 8px 0px 16px 16px;
+  color: gray;
+  line-height: 1.5;
 }
 
 @media only screen and (max-width: 480px) {
@@ -190,14 +253,25 @@ nav a {
 #thesis_exhibit h1 {
   display: block;
   text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 32px 0px 0px 0px;
 }
 
 #thesis_media {
   display: flex;
 }
 
-#thesis_video p {
-  padding-bottom: 32px;
+#thesis_media .media_box h3 {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 24px 0px 8px 0px;
+}
+
+#thesis_media p {
+  font-weight: 200;
+  letter-spacing: 1px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -212,11 +286,16 @@ nav a {
 footer {
   display: flex;
   justify-content: space-between;
+  border-top: 1px solid #e6e6e6;
   padding-top: 16px;
 }
 
 footer p {
   margin-left: 24px;
+}
+
+footer a {
+  margin-left: 16px;
 }
 
 @media only screen and (max-width: 480px) {
