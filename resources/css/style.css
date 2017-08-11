@@ -5,9 +5,18 @@ html {
   background-color: 	hsl(0, 0%, 98%);
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #header_full {
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  background-color: hsl(0, 0%, 98%);
+  border-bottom: 1px solid gray;
 }
 
 #header_mobile {
@@ -45,6 +54,11 @@ nav a {
   display: inline-block;
 }
 
+nav a:hover {
+  cursor: pointer;
+  cursor: hand;
+}
+
 .nav_accent {
   background-color: aquamarine;
   opacity: 0.5;
@@ -67,13 +81,31 @@ nav a {
   }
   #header_mobile {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    position: fixed;
+    height: 64px;
+    width: 100%;
+    background-color: hsl(0, 0%, 98%);
+    border-bottom: 1px solid gray;
+  }
+  #header_mobile a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 8px;
+  }
+  #header_mobile a:hover {
+    background-color: aquamarine;
+    opacity: 0.5;
+    cursor: pointer;
+    cursor: hand;
   }
 }
 
 #headline_banner {
   display: flex;
   background-color: #e6e6e6;
+  padding-top: 64px;
 }
 
 #headline_text {
@@ -94,7 +126,7 @@ nav a {
   letter-spacing: 1px;
 }
 
-#start_button {
+.start_button {
   color: white;
   background-color: #404040;
   padding-top: 8px;
@@ -103,9 +135,42 @@ nav a {
   letter-spacing: 1px;
 }
 
+.start_button:hover {
+  background-color: hsl(0, 0%, 98%);
+  color: #404040;
+  cursor: pointer;
+  cursor: hand;
+}
+
+#start_mobile {
+  display: none;
+}
+
 @media only screen and (max-width: 480px) {
   #headline_banner {
     display: block;
+  }
+  #headline_text {
+    text-align: left;
+    padding-left: 16px;
+    padding-bottom: 0px;
+  }
+  #headline_text h1 {
+    padding-top: 32px;
+  }
+  #headline_text h3 {
+    padding-top: 0px;
+  }
+  .media_box {
+    width: 100%;
+    margin: 0;
+  }
+  #start_full {
+    display: none;
+  }
+  #start_mobile {
+    display: block;
+    border: 1px solid red;
   }
 }
 
@@ -127,6 +192,10 @@ nav a {
 
 .sidebar_info:hover {
   background-color: #e6e6e6;
+}
+
+.sidebar_info .mobile_res {
+  display: none;
 }
 
 .sidebar img {
@@ -153,6 +222,11 @@ nav a {
   color: #6666ff;
 }
 
+.sidebar a:hover {
+  cursor: pointer;
+  cursor: hand;
+}
+
 #practice_image h1 {
   letter-spacing: 1px;
   margin: 32px 0px;
@@ -174,13 +248,29 @@ nav a {
     display: none;
   }
   .sidebar {
-    margin: 16px 16px;
+    margin: 0;
     width: 100%;
-    height: auto;
+    padding: 16px;
   }
-  .sidebar img {
+  .sidebar_info {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: auto;
+  }
+  .sidebar_info .full_res {
+    display: none;
+  }
+  .sidebar_info .mobile_res {
+    display: block;
+    margin: 0;
+    width: 100%;
+  }
+  .sidebar_info div {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .sidebar_info h3, p, a {
+    padding: 16px 0px 16px 16px;
   }
 }
 
@@ -239,14 +329,30 @@ nav a {
 }
 
 @media only screen and (max-width: 480px) {
+  #learning_content {
+    background-color: hsl(0, 0%, 98%);
+    border: 1px solid #e6e6e6;
+  }
+  #learning_content h1 {
+    margin: 0;
+  }
   #course_box {
     margin: 32px 16px;
   }
   .course_concentration {
     width: 100%;
+    background-color: #e6e6e6;
+    padding: 16px;
+    margin-bottom: 8px;
   }
   .course_concentration img, span, p {
     display: none;
+  }
+  .course_concentration:hover {
+    background-color: #404040;
+    color: white;
+    cursor: pointer;
+    cursor: hand;
   }
 }
 
@@ -275,10 +381,14 @@ nav a {
 }
 
 @media only screen and (max-width: 480px) {
+  #thesis_exhibit h1 {
+    padding: 32px 0px;
+    margin-top: 0;
+  }
   #thesis_exhibit .sidebar {
     display: none;
   }
-  #media_box h3, p {
+  #thesis_media h3, p {
     display: none;
   }
 }
