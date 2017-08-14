@@ -19,7 +19,7 @@ body {
   border-bottom: 1px solid gray;
 }
 
-#header_mobile {
+#header_mobile, #header_mid {
   display: none;
 }
 
@@ -73,6 +73,40 @@ nav a:hover {
 
 .media_box img {
   width: 100%;
+}
+
+@media only screen and (max-width: 1030px) {
+  /* Set CSS for midsize breakpoint */
+  #header_full, #header_mobile {
+    display: none;
+  }
+  #header_mid {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    height: 64px;
+    width: 100%;
+    background-color: hsl(0, 0%, 98%);
+    border-bottom: 1px solid gray;
+  }
+  #header_mid nav {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #header_mid a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  #header_mid a:hover {
+    background-color: aquamarine;
+    opacity: 0.5;
+    cursor: pointer;
+    cursor: hand;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -146,9 +180,44 @@ nav a:hover {
   display: none;
 }
 
+@media only screen and (max-width: 1030px) {
+  #headline_banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #headline_banner .media_box {
+    width: 80%;
+    margin: 24px;
+  }
+  #headline_text {
+    text-align: center;
+    padding-left: 16px;
+    padding-bottom: 0px;
+  }
+  #headline_text h1 {
+    padding-top: 0px;
+  }
+  #headline_text h3 {
+    padding-top: 0px;
+  }
+  #headline_banner .media_box {
+    width: 80%;
+    margin: 24px;
+  }
+  #start_full {
+    margin-bottom: 32px;
+    width: 100%;
+  }
+  #start_mobile {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   #headline_banner {
     display: block;
+    padding-bottom: 16px;
   }
   #headline_text {
     text-align: left;
@@ -161,7 +230,7 @@ nav a:hover {
   #headline_text h3 {
     padding-top: 0px;
   }
-  .media_box {
+  #headline_banner .media_box {
     width: 100%;
     margin: 0;
   }
@@ -170,7 +239,11 @@ nav a:hover {
   }
   #start_mobile {
     display: block;
-    border: 1px solid red;
+    margin: 0px 16px;
+    padding: 0px;
+  }
+  #start_mobile p {
+    font-size: 18px;
   }
 }
 
@@ -243,6 +316,35 @@ nav a:hover {
   font-weight: 400;
 }
 
+@media only screen and (max-width: 1030px) {
+  #info_banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #info_banner .media_box {
+    width: 80%;
+    margin: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  #practice_image h1 {
+    text-align: center;
+  }
+  .sidebar {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sidebar_info {
+    width: 70%;
+  }
+  .sidebar p {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   #practice_image {
     display: none;
@@ -250,12 +352,13 @@ nav a:hover {
   .sidebar {
     margin: 0;
     width: 100%;
-    padding: 16px;
+    padding: 0px 16px;
   }
   .sidebar_info {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top: 0px;
   }
   .sidebar_info .full_res {
     display: none;
@@ -328,6 +431,40 @@ nav a:hover {
   line-height: 1.5;
 }
 
+@media only screen and (max-width: 1030px) {
+  #course_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 32px 72px;
+  }
+  .course_concentration {
+    width: 60%;
+    background-color: white;
+    margin-bottom: 32px;
+  }
+  .course_concentration img {
+    width: 100%;
+    height: auto;
+  }
+  .course_concentration h3 {
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding: 16px;
+    margin: 0px;
+  }
+  .course_concentration h3:hover {
+    background-color: #e6e6e6;
+    border: 4px solid white;
+    cursor: pointer;
+    cursor: hand;
+  }
+  .course_concentration span, .course_concentration p {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   #learning_content {
     background-color: hsl(0, 0%, 98%);
@@ -345,7 +482,7 @@ nav a:hover {
     padding: 16px;
     margin-bottom: 8px;
   }
-  .course_concentration img, span, p {
+  .course_concentration img, .course_concentration span, .course_concentration p {
     display: none;
   }
   .course_concentration:hover {
@@ -353,6 +490,10 @@ nav a:hover {
     color: white;
     cursor: pointer;
     cursor: hand;
+  }
+  .course_concentration h3:hover {
+    background-color: inherit;
+    border: none;
   }
 }
 
@@ -380,6 +521,32 @@ nav a:hover {
   letter-spacing: 1px;
 }
 
+@media only screen and (max-width: 1030px) {
+  #thesis_exhibit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #thesis_exhibit .media_box {
+    width: 80%;
+    margin: 24px;
+  }
+  #thesis_media {
+    display: inherit;
+    justify-content: center;
+  }
+  #thesis_exhibit h1 {
+    padding: 0px;
+    margin-top: 0px;
+  }
+  #thesis_exhibit .sidebar {
+    display: none;
+  }
+  #thesis_media h3, #thesis_media p {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   #thesis_exhibit h1 {
     padding: 32px 0px;
@@ -388,7 +555,7 @@ nav a:hover {
   #thesis_exhibit .sidebar {
     display: none;
   }
-  #thesis_media h3, p {
+  #thesis_media h3, #thesis_media p {
     display: none;
   }
 }
@@ -406,6 +573,12 @@ footer p {
 
 footer a {
   margin-left: 16px;
+}
+
+@media only screen and (max-width: 1030px) {
+  footer p, footer a {
+    font-size: 10px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
