@@ -10,7 +10,14 @@ body {
   padding: 0;
 }
 
+a:hover {
+  cursor: pointer;
+  cursor: hand;
+}
+
 #header_full {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -24,6 +31,8 @@ body {
 }
 
 #logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   align-items: center;
   height: 64px;
@@ -45,6 +54,8 @@ body {
 }
 
 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   align-items: center;
   padding-right: 24px;
@@ -52,11 +63,6 @@ nav {
 
 nav a {
   display: inline-block;
-}
-
-nav a:hover {
-  cursor: pointer;
-  cursor: hand;
 }
 
 .nav_accent {
@@ -81,6 +87,8 @@ nav a:hover {
     display: none;
   }
   #header_mid {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -90,12 +98,16 @@ nav a:hover {
     border-bottom: 1px solid gray;
   }
   #header_mid nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 30%;
     justify-content: space-between;
     align-items: center;
   }
   #header_mid a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,8 +116,6 @@ nav a:hover {
   #header_mid a:hover {
     background-color: aquamarine;
     opacity: 0.5;
-    cursor: pointer;
-    cursor: hand;
   }
 }
 
@@ -114,6 +124,8 @@ nav a:hover {
     display: none;
   }
   #header_mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     justify-content: space-around;
     position: fixed;
@@ -123,6 +135,8 @@ nav a:hover {
     border-bottom: 1px solid gray;
   }
   #header_mobile a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -131,18 +145,20 @@ nav a:hover {
   #header_mobile a:hover {
     background-color: aquamarine;
     opacity: 0.5;
-    cursor: pointer;
-    cursor: hand;
   }
 }
 
 #headline_banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #e6e6e6;
   padding-top: 64px;
 }
 
 #headline_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -182,6 +198,8 @@ nav a:hover {
 
 @media only screen and (max-width: 1030px) {
   #headline_banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,10 +213,7 @@ nav a:hover {
     padding-left: 16px;
     padding-bottom: 0px;
   }
-  #headline_text h1 {
-    padding-top: 0px;
-  }
-  #headline_text h3 {
+  #headline_text h1, #headline_text h3 {
     padding-top: 0px;
   }
   #headline_banner .media_box {
@@ -248,10 +263,14 @@ nav a:hover {
 }
 
 #info_banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   width: 35%;
@@ -259,6 +278,8 @@ nav a:hover {
 }
 
 .sidebar_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   align-items: center;
 }
@@ -295,11 +316,6 @@ nav a:hover {
   color: #6666ff;
 }
 
-.sidebar a:hover {
-  cursor: pointer;
-  cursor: hand;
-}
-
 #practice_image h1 {
   letter-spacing: 1px;
   margin: 32px 0px;
@@ -318,6 +334,8 @@ nav a:hover {
 
 @media only screen and (max-width: 1030px) {
   #info_banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -333,8 +351,6 @@ nav a:hover {
   }
   .sidebar {
     width: 90%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
   }
   .sidebar_info {
@@ -355,7 +371,6 @@ nav a:hover {
     padding: 0px 16px;
   }
   .sidebar_info {
-    display: flex;
     flex-direction: column;
     width: 100%;
     margin-top: 0px;
@@ -391,6 +406,8 @@ nav a:hover {
 }
 
 #course_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -401,6 +418,12 @@ nav a:hover {
   width: 30%;
   background-color: white;
   margin-bottom: 32px;
+}
+
+.course_concentration:hover {
+  background-color: #ccddff;
+  cursor: pointer;
+  cursor: hand;
 }
 
 .course_concentration img {
@@ -433,14 +456,12 @@ nav a:hover {
 
 @media only screen and (max-width: 1030px) {
   #course_box {
-    display: flex;
     flex-direction: column;
     align-items: center;
     margin: 32px 72px;
   }
   .course_concentration {
     width: 60%;
-    background-color: white;
     margin-bottom: 32px;
   }
   .course_concentration img {
@@ -449,16 +470,6 @@ nav a:hover {
   }
   .course_concentration h3 {
     text-align: center;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    padding: 16px;
-    margin: 0px;
-  }
-  .course_concentration h3:hover {
-    background-color: #e6e6e6;
-    border: 4px solid white;
-    cursor: pointer;
-    cursor: hand;
   }
   .course_concentration span, .course_concentration p {
     display: none;
@@ -506,6 +517,8 @@ nav a:hover {
 }
 
 #thesis_media {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -523,6 +536,8 @@ nav a:hover {
 
 @media only screen and (max-width: 1030px) {
   #thesis_exhibit {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -561,6 +576,8 @@ nav a:hover {
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #e6e6e6;
